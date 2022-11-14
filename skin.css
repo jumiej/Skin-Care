@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    /* border: 2px solid red; */
+    display: flex;
+}
+header nav {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+header nav .nav-items-wrapper{
+    display: flex;
+    width: 50%;
+     /* border: 2px solid red; */
+     gap: 3rem;
+     justify-content: space-between;
+
+}
+header nav .nav-items-wrapper > ul.nav-items{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    
+}
+header nav .nav-items-wrapper > ul.nav-items > li{
+    padding: 0 .5rem;
+    list-style: none;
+    gap: 1rem;
+  
+}
+header nav .nav-items-wrapper > ul.nav-items > li > a{
+    color: #000;
+}
+
+
+header nav .nav-items-wrapper > ul.hamburger-wrapper{
+    width: calc(100% - 70% - 2rem);
+    display: flex;
+    list-style: none; 
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+header nav .nav-items-wrapper > ul.hamburger-wrapper a{
+    color: rgb(82, 71, 71);
+    opacity: 0.9;
+}
+
+
+@media screen and (max-width:831px){
+    header nav .nav-items-wrapper{
+        width: 80%;
+    } 
+}
+@media screen and (max-width:537px) {
+    header nav .nav-items-wrapper{
+        width: fit-content;
+    }
+    header nav .nav-items-wrapper > ul.hamburger-wrapper{
+        width: fit-content;
+    }
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .hamburger > span{
+        height: 5px ;
+        width: 5px ;
+        border-radius: 100%;
+        background-color: rgb(17, 6, 6);
+    }
+   header nav .nav-items-wrapper > ul.nav-items{
+        position: absolute;
+         top: -100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        background-color: #c3c4c7;
+        transition: all 0.3s ease-in-out;
+        
+    }
+   header nav .nav-items-wrapper > ul.nav-items.show{
+    top: 80px;
+    transition: all 0.3s ease-in-out;
+
+   }
+    
+}
+
+main{
+    max-width: 1170px;
+    /* border: 2px solid red; */
+    width: 100vw;
+    margin: 0 auto;
+}
+
+main > .body {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin-top: 50px;
+    display: block;
+    padding: 0 5rem;
+    /* border: solid black; */
+}
+
+main .body .top > img {
+    width: 250px;
+    height: 350px;
+}
+
+main .body .top {
+    display: flex;
+}
+
+main .body .top .top-text {
+    display: block;
+    margin-left: 8%;
+    margin-top: 50px;
+}
+
+main .body .top .top-text .text {
+    /* border: 2px solid red; */
+    width: 45%;
+   font-size: 30px;
+   text-align: center;
+   /* border-bottom: 2px solid black; */
+}
+
+main .body .top .top-text .text span{
+    margin-left: 70px;
+   
+}
+
+main .body .top .top-text .text .web {
+    margin-left: 160px;
+}
+
+main .body .top .top-text hr {
+    width: 45%;
+    border: 1px solid black;
+    margin-top: 30px;
+    color: #000;
+}
+main .body .top .top-text .star {
+    margin-top: 30px;
+    color: rgb(16, 145, 145);
+    gap: 5px;
+    padding: 0 5px;
+}
+main .body .top .top-text .star span {
+    color: #000;
+    font-weight: 700;
+}
+
+main .body .top .top-text .amount {
+    font-size: 45px;
+    font-weight: 900;
+
+}
+
+main .body .bottom .cards span {
+    /* margin-left: 15%; */
+    padding: 0 100px;
+}
+
+main .body .bottom .cards {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+footer .more {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-top: 50px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: .6;
+
+}
+
+footer .more .right {
+    display: flex;   
+    gap: 20px;
+}
+
+footer .more ul {
+    list-style: none;
+}
+
+main footer .media {
+    /* max-width: 10px; */
+    display: flex;
+    margin-left: 87%;
+    gap: 12px;
+}
+
+.media  a {
+    width: 25px;
+    height: 25px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    color: #000;
+    background-color:  #bfbfbf;
+    opacity: 0.8;
+}
+header .heading {
+    margin: 0 auto;
+    text-align: center;
+        
+}
+
+header .title {
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+
+header .sub-title {
+    font-size: 15px;
+    opacity: 0.7;
+}
